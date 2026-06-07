@@ -134,56 +134,6 @@ export default function KontaktPage() {
         </div>
       </section>
 
-      {/* Spendenkonto */}
-      <section className="py-14 sm:py-20 bg-[#0d7377]" aria-labelledby="spende-heading">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center text-white mb-10">
-            <p className="text-teal-200 font-semibold text-sm uppercase tracking-widest mb-2">
-              Jede Hilfe zählt
-            </p>
-            <h2 id="spende-heading" className="text-3xl sm:text-4xl font-bold mb-3">
-              Spendenkonto
-            </h2>
-            <p className="text-teal-100 max-w-xl mx-auto">
-              Ihre Spende kommt direkt und vollständig bei Betroffenen an.
-              Als gemeinnützige Stiftung erhalten Sie automatisch eine
-              steuerlich absetzbare Spendenquittung.
-            </p>
-          </div>
-
-          <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div className="bg-[#0a5c5f] px-6 py-4 flex items-center gap-3">
-              <svg className="w-6 h-6 text-teal-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
-              </svg>
-              <span className="text-white font-semibold">Bankverbindung</span>
-            </div>
-            <dl className="divide-y divide-gray-100">
-              {[
-                { label: "Empfänger", value: "Stiftung Kölner Opferhilfe", mono: false },
-                { label: "Bank", value: "Sparkasse KölnBonn", mono: false },
-                { label: "IBAN", value: "DE12 3705 0198 1931 1469 12", mono: true },
-                { label: "BIC", value: "COLSDE33XXX", mono: true },
-                { label: "Verwendungszweck", value: "Stiftung Kölner Opferhilfe", mono: false },
-              ].map((row) => (
-                <div key={row.label} className="flex flex-col sm:flex-row sm:items-center px-6 py-4 gap-1">
-                  <dt className="text-sm text-gray-500 sm:w-44 shrink-0">{row.label}</dt>
-                  <dd className={`font-semibold text-gray-900 ${row.mono ? "font-mono tracking-wide text-[#0d7377]" : ""}`}>
-                    {row.value}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-            <div className="bg-[#f0fafa] px-6 py-4 flex items-center gap-2 text-sm text-[#0d7377]">
-              <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
-              <span>Spenden sind steuerlich absetzbar — Quittung auf Wunsch oder automatisch.</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Formular */}
       <section id="hilfe-formular" className="py-16 sm:py-24" aria-label="Kontaktformular">
         <div className="max-w-4xl mx-auto px-4">
