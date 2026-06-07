@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -56,6 +57,7 @@ export default function RootLayout({
         <a href="#main-content" className="skip-link">
           Zum Hauptinhalt springen
         </a>
+        <ScrollToTop />
         <Header />
         <main id="main-content" className="flex-1">
           {children}

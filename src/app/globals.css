@@ -19,9 +19,10 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Kompensiert die sticky Header-Höhe (~120px) bei Anker-Navigation */
+/* Kompensiert die sticky Header-Höhe (Emergency-Bar ~36px + Nav ~80px = ~116px)
+   + etwas Luft damit Headlines nie abgeschnitten werden */
 [id] {
-  scroll-margin-top: 7.5rem;
+  scroll-margin-top: 9rem;
 }
 
 body {
