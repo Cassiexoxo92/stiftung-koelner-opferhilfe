@@ -55,29 +55,27 @@ export default function SpendenPage() {
     <>
       {/* Hero */}
       <section className="bg-[#0d7377] text-white py-16 sm:py-24" aria-labelledby="spenden-hero-heading">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="max-w-2xl">
-            <p className="text-teal-200 font-semibold text-sm uppercase tracking-widest mb-4">
-              Jede Hilfe zählt
-            </p>
-            <h1 id="spenden-hero-heading" className="text-4xl sm:text-5xl font-bold mb-5">
-              Spenden Sie für Opferhilfe
-            </h1>
-            <p className="text-teal-100 text-lg leading-relaxed mb-8">
-              Ihre Spende ermöglicht direkte, schnelle Hilfe für Menschen in Köln,
-              die durch Gewalt oder Unfälle in Not geraten sind. Kostenlos und
-              unbürokratisch — dank Ihrer Unterstützung.
-            </p>
-            <a
-              href="#spendenkonto"
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-white text-[#0d7377] font-bold rounded-lg hover:bg-teal-50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
-            >
-              Direkt zum Spendenkonto
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
-            </a>
-          </div>
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <p className="text-teal-200 font-bold text-2xl sm:text-3xl mb-4">
+            Jede Spende hilft.
+          </p>
+          <h1 id="spenden-hero-heading" className="text-4xl sm:text-5xl font-bold mb-5">
+            Spenden Sie für Opferhilfe
+          </h1>
+          <p className="text-teal-100 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+            Ihre Spende ermöglicht direkte, schnelle Hilfe für Menschen in Köln,
+            die durch Gewalt oder Unfälle in Not geraten sind. Kostenlos und
+            unbürokratisch — dank Ihrer Unterstützung.
+          </p>
+          <a
+            href="#spendenkonto"
+            className="inline-flex items-center justify-center w-12 h-12 bg-white/20 border border-white/40 rounded-full hover:bg-white/30 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white mx-auto"
+            aria-label="Zum Spendenkonto scrollen"
+          >
+            <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
         </div>
       </section>
 
