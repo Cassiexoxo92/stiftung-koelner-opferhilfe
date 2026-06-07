@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
@@ -31,11 +32,16 @@ export default function KontaktPage() {
       <section className="py-16 sm:py-20 border-b border-gray-100" aria-labelledby="vorstand-kontakt-heading">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8 max-w-3xl">
-            {/* Avatar */}
+            {/* Foto */}
             <div className="shrink-0">
-              <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl bg-[#0d7377] flex items-center justify-center text-white text-5xl font-bold shadow-lg">
-                JD
-              </div>
+              <Image
+                src="/jochen-duerselen.png"
+                alt="Jochen Dürselen, Stiftungsvorstand"
+                width={160}
+                height={160}
+                className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl object-cover object-top shadow-lg"
+                priority
+              />
             </div>
             {/* Text */}
             <div>
