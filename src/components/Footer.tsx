@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300" aria-label="Seitenfuß">
+    <footer className="bg-[#0b4547] text-gray-300" aria-label="Seitenfuß">
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Logo + About */}
@@ -23,7 +23,7 @@ export default function Footer() {
                 Opferhilfe
               </span>
             </Link>
-            <p className="text-sm leading-relaxed text-gray-400">
+            <p className="text-sm leading-relaxed text-teal-200/70">
               Gegründet 2012. Wir helfen Menschen im Raum Köln, die durch Gewalt
               oder Unfall zu Opfern geworden sind — vertraulich, unbürokratisch
               und kostenlos.
@@ -46,7 +46,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="hover:text-white transition-colors focus:outline-none focus-visible:underline"
+                    className="text-teal-200/70 hover:text-white transition-colors focus:outline-none focus-visible:underline"
                   >
                     {link.label}
                   </Link>
@@ -64,7 +64,7 @@ export default function Footer() {
               <li>
                 <a
                   href="tel:+492214666670"
-                  className="flex items-center gap-2 hover:text-white transition-colors font-medium text-teal-400"
+                  className="flex items-center gap-2 hover:text-white transition-colors font-medium text-teal-300"
                   aria-label="Anrufen: 0221 466667"
                 >
                   <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
@@ -76,7 +76,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:info@stiftungkoelneropferhilfe.de"
-                  className="flex items-center gap-2 hover:text-white transition-colors break-all"
+                  className="flex items-center gap-2 text-teal-200/70 hover:text-white transition-colors break-all"
                 >
                   <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
@@ -85,7 +85,7 @@ export default function Footer() {
                   info@stiftungkoelneropferhilfe.de
                 </a>
               </li>
-              <li className="flex items-start gap-2">
+              <li className="flex items-start gap-2 text-teal-200/70">
                 <svg className="w-4 h-4 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                   <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                 </svg>
@@ -97,28 +97,32 @@ export default function Footer() {
             </ul>
 
             {/* Spendenkonto */}
-            <div className="mt-5 p-3 bg-gray-800 rounded-lg text-xs">
+            <div className="mt-5 p-3 bg-white/10 rounded-lg text-xs">
               <p className="text-white font-medium mb-1">Spendenkonto</p>
-              <p className="text-gray-400">Sparkasse KölnBonn</p>
-              <p className="font-mono text-gray-300 mt-1">IBAN: DE12 3705 0198 1931 1469 12</p>
-              <p className="font-mono text-gray-400">BIC: COLSDE33XXX</p>
+              <p className="text-teal-200/70">Sparkasse KölnBonn</p>
+              <p className="font-mono text-teal-100 mt-1">IBAN: DE12 3705 0198 1931 1469 12</p>
+              <p className="font-mono text-teal-200/70">BIC: COLSDE33XXX</p>
             </div>
           </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-10 pt-6 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-500">
-          <p>© {new Date().getFullYear()} Stiftung Kölner Opferhilfe. Alle Rechte vorbehalten.</p>
-          <p className="text-sm font-medium text-[#4db8bc]">
+        <div className="mt-10 pt-6 border-t border-white/10">
+          {/* Centered credit */}
+          <p className="text-center text-sm font-semibold text-[#7dd8db] mb-4">
             Designed by Sandra Rautenberg
           </p>
-          <div className="flex gap-4">
-            <Link href="/impressum" className="hover:text-gray-300 transition-colors focus:outline-none focus-visible:underline">
-              Impressum
-            </Link>
-            <Link href="/datenschutzhinweis" className="hover:text-gray-300 transition-colors focus:outline-none focus-visible:underline">
-              Datenschutz
-            </Link>
+          {/* Copyright + Legal */}
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-teal-200/50">
+            <p>© {new Date().getFullYear()} Stiftung Kölner Opferhilfe. Alle Rechte vorbehalten.</p>
+            <div className="flex gap-4">
+              <Link href="/impressum" className="hover:text-white transition-colors focus:outline-none focus-visible:underline">
+                Impressum
+              </Link>
+              <Link href="/datenschutzhinweis" className="hover:text-white transition-colors focus:outline-none focus-visible:underline">
+                Datenschutz
+              </Link>
+            </div>
           </div>
         </div>
       </div>
