@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cmd=$(echo \"$STDIN\" | python3 -c \"import sys,json; d=json.load(sys.stdin); print(d.get('tool_input',{}).get('command',''))\" 2>/dev/null); echo \"$cmd\" | grep -q 'git commit' && git -C /Users/cassie/Opferhilfe push 2>/dev/null || true",
+            "statusMessage": "Pushing to GitHub…"
+          }
+        ]
+      }
+    ]
+  }
+}

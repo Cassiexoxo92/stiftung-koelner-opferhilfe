@@ -9,6 +9,7 @@ const navLinks = [
   { href: "/stiftung", label: "Die Stiftung" },
   { href: "/helfen", label: "Helfen" },
   { href: "/ueber-uns", label: "Über uns" },
+  { href: "/spenden", label: "Spenden" },
   { href: "/satzung", label: "Satzung" },
   { href: "/kontakt", label: "Kontakt" },
 ];
