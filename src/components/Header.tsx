@@ -10,6 +10,7 @@ const navLinks = [
   { href: "/helfen", label: "Helfen" },
   { href: "/ueber-uns", label: "Über uns" },
   { href: "/satzung", label: "Satzung" },
+  { href: "/kontakt", label: "Kontakt" },
 ];
 
 export default function Header() {
@@ -127,7 +128,7 @@ export default function Header() {
                 href="/kontakt#hilfe-formular"
                 className="ml-3 px-4 py-2 bg-[#0d7377] text-white rounded-md text-sm font-semibold hover:bg-[#0a5c5f] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#0d7377]"
               >
-                Hilfe & Kontakt
+                Hilfe suchen
               </Link>
             </div>
 
@@ -180,7 +181,7 @@ export default function Header() {
                 href="/kontakt#hilfe-formular"
                 className="mt-2 px-4 py-3 bg-[#0d7377] text-white rounded-md text-base font-semibold text-center hover:bg-[#0a5c5f] transition-colors"
               >
-                Hilfe & Kontakt
+                Hilfe suchen
               </Link>
             </div>
           </div>
