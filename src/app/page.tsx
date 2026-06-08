@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -196,28 +197,40 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <div className="bg-[#f0fafa] rounded-2xl p-8 border border-teal-100">
-              <p className="text-sm font-semibold text-[#0d7377] uppercase tracking-wider mb-5">
-                Wir helfen bei
-              </p>
-              <ul className="space-y-4" role="list">
-                {[
-                  "Körperlicher Gewalt & Misshandlung",
-                  "Raub, Einbruch & Diebstahl mit Gewalt",
-                  "Sexualisierter Gewalt",
-                  "Verkehrsunfällen mit schweren Folgen",
-                  "Häuslicher Gewalt",
-                  "Psychischen Folgeerkrankungen",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-[#0d7377] shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
+            {/* Foto */}
+            <div className="relative rounded-3xl overflow-hidden shadow-lg aspect-[4/5]">
+              <Image
+                src="/haende-trost.jpg"
+                alt="Zwei Menschen halten sich einfühlsam an den Händen – ein Zeichen von Unterstützung und Mitgefühl"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
+          </div>
+
+          {/* Wir helfen bei – Liste darunter */}
+          <div className="mt-12 bg-[#f0fafa] rounded-2xl p-8 border border-teal-100">
+            <p className="text-sm font-semibold text-[#0d7377] uppercase tracking-wider mb-5">
+              Wir helfen bei
+            </p>
+            <ul className="grid sm:grid-cols-2 gap-3" role="list">
+              {[
+                "Körperlicher Gewalt & Misshandlung",
+                "Raub, Einbruch & Diebstahl mit Gewalt",
+                "Sexualisierter Gewalt",
+                "Verkehrsunfällen mit schweren Folgen",
+                "Häuslicher Gewalt",
+                "Psychischen Folgeerkrankungen",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#0d7377] shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-700">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -280,6 +293,28 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Foto-Zitat */}
+      <section className="relative h-64 sm:h-80 overflow-hidden" aria-label="Zitat">
+        <Image
+          src="/haende-nahe.jpg"
+          alt=""
+          fill
+          className="object-cover object-center"
+          sizes="100vw"
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 bg-[#0d7377]/72 flex items-center justify-center px-6">
+          <blockquote className="text-center text-white max-w-2xl">
+            <p className="text-xl sm:text-2xl font-medium leading-relaxed">
+              „Niemand sollte nach einem traumatischen Erlebnis allein gelassen werden."
+            </p>
+            <footer className="mt-4 text-teal-200 text-sm font-semibold tracking-wide uppercase">
+              Jochen Dürselen · Stiftungsvorstand
+            </footer>
+          </blockquote>
         </div>
       </section>
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Spenden",
@@ -127,6 +128,24 @@ export default function SpendenPage() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Atmosphärisches Foto */}
+      <section className="relative h-56 sm:h-72 overflow-hidden" aria-label="Hoffnung und Licht">
+        <Image
+          src="/hoffnung-licht.jpg"
+          alt=""
+          fill
+          className="object-cover object-center"
+          sizes="100vw"
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 bg-[#0d7377]/60 flex items-center justify-center px-6">
+          <p className="text-white text-xl sm:text-2xl font-semibold text-center max-w-xl leading-relaxed">
+            Ihre Spende gibt Menschen die Kraft,<br />
+            wieder nach vorne zu schauen.
+          </p>
         </div>
       </section>
 
