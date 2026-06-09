@@ -108,20 +108,16 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-10 pt-6 border-t border-white/10">
-          {/* Centered credit */}
-          <p className="text-center text-sm font-semibold text-[#7dd8db] mb-4">
-            Designed by Sandra Rautenberg
-          </p>
-          {/* Copyright + Legal */}
           <div className="flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-teal-200/50">
             <p>© {new Date().getFullYear()} Stiftung Kölner Opferhilfe. Alle Rechte vorbehalten.</p>
-            <div className="flex gap-4">
+            <div className="flex items-center gap-4">
               <Link href="/impressum" className="hover:text-white transition-colors focus:outline-none focus-visible:underline">
                 Impressum
               </Link>
               <Link href="/datenschutzhinweis" className="hover:text-white transition-colors focus:outline-none focus-visible:underline">
                 Datenschutz
               </Link>
+              <span className="text-teal-200/30 text-[11px] italic">Designed by Sandra Rautenberg</span>
             </div>
           </div>
         </div>
