@@ -84,62 +84,83 @@ export default function HomePage() {
           </svg>
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-4 py-20 sm:py-28 lg:py-36">
-          <div className="max-w-2xl">
-            <p className="text-teal-200 font-semibold text-sm uppercase tracking-widest mb-4">
-              Stiftung Kölner Opferhilfe
-            </p>
-            <h1
-              id="hero-heading"
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
-            >
-              Sie sind nicht
-              <br />
-              allein.
-            </h1>
-            <p className="text-lg sm:text-xl text-teal-100 mb-8 leading-relaxed max-w-xl">
-              Wenn Gewalt oder ein Unfall Ihr Leben verändert hat — wir sind da.
-              Kostenlos, vertraulich und unbürokratisch.
-            </p>
+        <div className="relative max-w-6xl mx-auto px-4 py-16 sm:py-24 lg:py-32">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
 
-            <div className="inline-flex items-center gap-3 bg-white/10 border border-white/20 rounded-xl px-5 py-4 mb-8">
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shrink-0" aria-hidden="true">
-                <svg className="w-5 h-5 text-[#0d7377]" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                </svg>
+            {/* Text */}
+            <div>
+              <p className="text-teal-200 font-semibold text-sm uppercase tracking-widest mb-4">
+                Stiftung Kölner Opferhilfe
+              </p>
+              <h1
+                id="hero-heading"
+                className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
+              >
+                Sie sind nicht
+                <br />
+                allein.
+              </h1>
+              <p className="text-lg sm:text-xl text-teal-100 mb-8 leading-relaxed">
+                Wenn Gewalt oder ein Unfall Ihr Leben verändert hat — wir sind da.
+                Kostenlos, vertraulich und unbürokratisch.
+              </p>
+
+              <div className="inline-flex items-center gap-3 bg-white/10 border border-white/20 rounded-xl px-5 py-4 mb-8">
+                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shrink-0" aria-hidden="true">
+                  <svg className="w-5 h-5 text-[#0d7377]" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-xs text-teal-200 font-medium">Direkte Hilfe</p>
+                  <a
+                    href="tel:+492214666670"
+                    className="text-2xl font-bold hover:text-teal-200 transition-colors"
+                    aria-label="Jetzt anrufen: 0221 466667"
+                  >
+                    0221 466667
+                  </a>
+                </div>
               </div>
-              <div>
-                <p className="text-xs text-teal-200 font-medium">Direkte Hilfe</p>
-                <a
-                  href="tel:+492214666670"
-                  className="text-2xl font-bold hover:text-teal-200 transition-colors"
-                  aria-label="Jetzt anrufen: 0221 466667"
+
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link
+                  href="/kontakt"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white text-[#0d7377] font-semibold rounded-lg hover:bg-teal-50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0d7377]"
                 >
-                  0221 466667
-                </a>
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                  Ich brauche Hilfe
+                </Link>
+                <Link
+                  href="/helfen"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/10 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/20 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                >
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Ich möchte helfen
+                </Link>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Link
-                href="/kontakt"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white text-[#0d7377] font-semibold rounded-lg hover:bg-teal-50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0d7377]"
-              >
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-                Ich brauche Hilfe
-              </Link>
-              <Link
-                href="/helfen"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/10 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/20 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
-              >
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                Ich möchte helfen
-              </Link>
+            {/* Foto */}
+            <div className="hidden lg:block relative">
+              <div className="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl ring-1 ring-white/10">
+                <Image
+                  src="/blume-hoffnung.jpg"
+                  alt="Eine Hand hält behutsam eine weiße Blume – Symbol für Fürsorge und Hoffnung"
+                  fill
+                  className="object-cover object-center"
+                  priority
+                  sizes="50vw"
+                />
+                {/* dezenter Gradient unten für weichen Übergang */}
+                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0d7377]/60 to-transparent" aria-hidden="true" />
+              </div>
             </div>
+
           </div>
         </div>
       </section>
