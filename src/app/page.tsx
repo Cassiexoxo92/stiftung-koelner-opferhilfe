@@ -146,18 +146,16 @@ export default function HomePage() {
             </div>
 
             {/* Foto */}
-            <div className="hidden lg:block relative">
-              <div className="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl ring-1 ring-white/10">
+            <div className="hidden lg:flex justify-center items-center">
+              <div className="relative rounded-full overflow-hidden aspect-square w-80 xl:w-96 shadow-2xl ring-4 ring-white/20">
                 <Image
                   src="/blume-hoffnung.jpg"
-                  alt="Eine Hand hält behutsam eine weiße Blume – Symbol für Fürsorge und Hoffnung"
+                  alt="Eine ausgestreckte Hand im Sonnenuntergang – Symbol für Hoffnung und Hilfe"
                   fill
                   className="object-cover object-center"
                   priority
-                  sizes="50vw"
+                  sizes="400px"
                 />
-                {/* dezenter Gradient unten für weichen Übergang */}
-                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0d7377]/60 to-transparent" aria-hidden="true" />
               </div>
             </div>
 
